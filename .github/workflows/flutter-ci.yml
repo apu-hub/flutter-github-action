@@ -60,4 +60,5 @@ jobs:
       run: |
         ls
         cd action-test
-        node send-data.js
+
+    # node send-data.js
