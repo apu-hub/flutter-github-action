@@ -58,5 +58,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: run send-data
       run: |
-        cd /action-test
+        ls
         node send-data.js
