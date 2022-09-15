@@ -61,6 +61,7 @@ jobs:
         ls
         cd action-test
         ls
+        npm i
         node index.js
 
     # node send-data.js
