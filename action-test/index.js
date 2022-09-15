@@ -14,7 +14,7 @@ const form = new FormData();
 form.append('file', file, fileName);
 
 // Send form data with axios
-const response = await axios.post('https://susa.deta.dev/from-github/upload', form, {
+const response = await axios.post('https://test-123.epizy.com/upload/tazzatv/index.php', form, {
   maxContentLength: Infinity,
   maxBodyLength: Infinity,
   headers: {'Content-Type': 'multipart/form-data;boundary=' + form.getBoundary()}
