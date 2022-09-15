@@ -4,7 +4,7 @@ import fs from "node:fs/promises"
 
 var config = {
   method: 'get',
-  url: 'https://susa.deta.dev/from-github',
+  url: 'https://susa.deta.dev/from-github/upload',
   headers: { }
 };
 
