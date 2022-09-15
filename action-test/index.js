@@ -3,8 +3,9 @@ import FormData from "form-data"
 import fs from "node:fs/promises"
 // build/app/outputs/flutter-apk/app-release.apk
 const basePath = process.env.BASE_PATH || "build/app/outputs/flutter-apk"
-const file = await fs.readFile('./hello.text');
-const fileName = process.env.FILE_NAME || "final.text";
+const fileName = process.env.FILE_NAME || "/app-release.apk";
+
+const file = await fs.readFile(basePath + fileName);
 
 const form = new FormData();
 
