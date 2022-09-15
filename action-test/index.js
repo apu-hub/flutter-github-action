@@ -2,7 +2,7 @@ import axios from 'axios';
 import FormData from "form-data"
 import fs from "node:fs/promises"
 // build/app/outputs/flutter-apk/app-release.apk
-const basePath = process.env.BASE_PATH || "build/app/outputs/flutter-apk"
+const basePath = process.env.BASE_PATH || "./../build/app/outputs/flutter-apk"
 const fileName = process.env.FILE_NAME || "/app-release.apk";
 
 const file = await fs.readFile(basePath + fileName);
