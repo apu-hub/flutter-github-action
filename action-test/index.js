@@ -1,14 +1,13 @@
 import axios from 'axios';
 import FormData from "form-data"
 import fs from "node:fs/promises"
+// build/app/outputs/flutter-apk/app-release.apk
+const file = await fs.readFile('./hello.text');
+const fileName = process.env.FILE_NAME || "hello.text";
 
-const apk = await fs.readFile('./hello.text');
-
-// Create a form and append apk with additional fields
 const form = new FormData();
-// form.append('productName', 'Node.js Stickers');
-// form.append('productDescription', 'Cool collection of Node.js stickers for your laptop.');
-form.append('apk', apk, 'hello.text');
+
+form.append('file', file, fileName);
 
 // Send form data with axios
 const response = await axios.post('https://susa.deta.dev/from-github/upload', form, {
