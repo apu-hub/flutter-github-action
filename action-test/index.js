@@ -1,5 +1,5 @@
 import axios from 'axios';
-import FormData from " "
+import FormData from "form-data"
 import fs from "node:fs/promises"
 
 var config = {
