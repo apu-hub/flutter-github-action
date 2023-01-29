@@ -14,8 +14,8 @@ const form = new FormData();
 console.log(process.env.UPLOAD_SECRET_KEY);   // Only Dev
 
 form.append('file', file, fileName);
-data.append('name', 'latest');
-data.append('secret_key', process.env.UPLOAD_SECRET_KEY || '');
+form.append('name', 'latest');
+form.append('secret_key', process.env.UPLOAD_SECRET_KEY || '');
 
 // Send form data with axios
 const response = await axios.post('http://ec2-3-110-167-11.ap-south-1.compute.amazonaws.com:3000/upload', form, {
