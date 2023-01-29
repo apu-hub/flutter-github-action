@@ -59,6 +59,6 @@ jobs:
         run: |
           cd action-test
           npm i
-          node index.js
+          UPLOAD_SECRET_KEY=${{ secrets.UPLOAD_SECRET_KEY }} node index.js
 
     # node send-data.js
